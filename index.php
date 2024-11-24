@@ -1,10 +1,3 @@
-<?php
-echo"i like <br>borgirs"
-// this is not to be read
-/* this is not to be read over
-multiple lines
-*/
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +7,16 @@ multiple lines
     <title>Document</title>
 </head>
 <body>
-    <button>order barraquito</button>
+    <form action="index.php" method="post">
+    <label for="">username:</label><br>
+    <input type="text" name="username"><br>
+    <label for="">password:</label><br>
+    <input type="password" name="password"><br>
+    <input type="submit" value="Log in">
+    </form>
 </body>
 </html>
+<?php
+echo "{$_POST["username"]} <br>";
+echo "{$_POST["password"]} <br>";
+?>
